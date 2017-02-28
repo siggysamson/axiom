@@ -1,12 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ContextMenu renders with defaultProps 1`] = `
 <div
-  className="ax-context-box ax-context-box--padding-none">
+  className="ax-context-box ax-context-box--padding-none"
+>
   <ul
-    className="ax-context-menu">
+    className="ax-context-menu"
+  >
     <li
-      className="ax-context-menu__list-item">
+      className="ax-context-menu__list-item"
+    >
       <button
-        className="ax-context-menu__item">
+        className="ax-context-menu__item"
+      >
         Lorem ipsum
       </button>
     </li>

@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Form renders with defaultProps 1`] = `
 <form
-  className="ax-form">
+  className="ax-form"
+>
   Lorem ipsum
 </form>
 `;

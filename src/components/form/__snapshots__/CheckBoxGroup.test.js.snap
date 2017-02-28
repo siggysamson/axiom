@@ -1,16 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CheckBox renders with defaultProps 1`] = `
 <div
-  className="ax-chedio-buttox__group">
+  className="ax-chedio-buttox__group"
+>
   <label
-    className="ax-chedio-buttox__container">
+    className="ax-chedio-buttox__container"
+  >
     <input
       className="ax-chedio-buttox ax-checkbox"
       disabled={undefined}
-      type="checkbox" />
+      type="checkbox"
+    />
     <span
-      className="ax-chedio-buttox__indicator ax-checkbox__indicator" />
+      className="ax-chedio-buttox__indicator ax-checkbox__indicator"
+    />
     <span
-      className="ax-chedio-buttox__label">
+      className="ax-chedio-buttox__label"
+    >
       Lorem ipsum
     </span>
   </label>

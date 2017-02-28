@@ -1,8 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ContextMenuItem renders with defaultProps 1`] = `
 <li
-  className="ax-context-menu__list-item">
+  className="ax-context-menu__list-item"
+>
   <button
-    className="ax-context-menu__item">
+    className="ax-context-menu__item"
+  >
     Lorem ipsum
   </button>
 </li>

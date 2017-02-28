@@ -1,7 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Card renders with active 1`] = `
 <li
   className="ax-card ax-card--active"
-  onClick={undefined}>
+  onClick={undefined}
+>
   Lorem Ipsum
 </li>
 `;
@@ -9,7 +12,8 @@ exports[`Card renders with active 1`] = `
 exports[`Card renders with defaultProps 1`] = `
 <li
   className="ax-card"
-  onClick={undefined}>
+  onClick={undefined}
+>
   Lorem Ipsum
 </li>
 `;
@@ -17,7 +21,8 @@ exports[`Card renders with defaultProps 1`] = `
 exports[`Card renders with onClick styles 1`] = `
 <li
   className="ax-card ax-card--clickable"
-  onClick={[Function]}>
+  onClick={[Function]}
+>
   Lorem Ipsum
 </li>
 `;

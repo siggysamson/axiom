@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Avatar renders with custom size 1`] = `
 <div
   className="ax-image-circle"
@@ -6,9 +8,11 @@ exports[`Avatar renders with custom size 1`] = `
       "height": "4rem",
       "width": "4rem",
     }
-  }>
+  }
+>
   <div
-    className="ax-image-circle__image">
+    className="ax-image-circle__image"
+  >
     <img
       className="ax-image ax-space--small"
       onError={[Function]}
@@ -17,7 +21,8 @@ exports[`Avatar renders with custom size 1`] = `
         Object {
           "width": "100%",
         }
-      } />
+      }
+    />
   </div>
 </div>
 `;

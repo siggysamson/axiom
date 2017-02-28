@@ -1,8 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ContextTip renders with defaultProps 1`] = `
 <div
-  className="ax-context-box ax-context-box--padding-small">
+  className="ax-context-box ax-context-box--padding-small"
+>
   <p
-    className="ax-paragraph ax-space--tiny">
+    className="ax-paragraph ax-space--tiny"
+  >
     Lorem ipsum
   </p>
 </div>

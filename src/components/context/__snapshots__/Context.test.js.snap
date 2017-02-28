@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Context renders bottom 1`] = `
 <div
   className="ax-context ax-context--bottom ax-theme--light"
@@ -5,13 +7,16 @@ exports[`Context renders bottom 1`] = `
     Object {
       "width": "14.5rem",
     }
-  }>
+  }
+>
   <div
-    className="ax-context__content">
+    className="ax-context__content"
+  >
     Lorem ipsum
   </div>
   <span
-    className="ax-context__arrow" />
+    className="ax-context__arrow"
+  />
 </div>
 `;
 
@@ -22,13 +27,16 @@ exports[`Context renders custom width 1`] = `
     Object {
       "width": "20rem",
     }
-  }>
+  }
+>
   <div
-    className="ax-context__content">
+    className="ax-context__content"
+  >
     Lorem ipsum
   </div>
   <span
-    className="ax-context__arrow" />
+    className="ax-context__arrow"
+  />
 </div>
 `;
 
@@ -39,13 +47,16 @@ exports[`Context renders left 1`] = `
     Object {
       "width": "14.5rem",
     }
-  }>
+  }
+>
   <div
-    className="ax-context__content">
+    className="ax-context__content"
+  >
     Lorem ipsum
   </div>
   <span
-    className="ax-context__arrow" />
+    className="ax-context__arrow"
+  />
 </div>
 `;
 
@@ -56,13 +67,16 @@ exports[`Context renders right 1`] = `
     Object {
       "width": "14.5rem",
     }
-  }>
+  }
+>
   <div
-    className="ax-context__content">
+    className="ax-context__content"
+  >
     Lorem ipsum
   </div>
   <span
-    className="ax-context__arrow" />
+    className="ax-context__arrow"
+  />
 </div>
 `;
 
@@ -73,13 +87,16 @@ exports[`Context renders top 1`] = `
     Object {
       "width": "14.5rem",
     }
-  }>
+  }
+>
   <div
-    className="ax-context__content">
+    className="ax-context__content"
+  >
     Lorem ipsum
   </div>
   <span
-    className="ax-context__arrow" />
+    className="ax-context__arrow"
+  />
 </div>
 `;
 
@@ -90,12 +107,15 @@ exports[`Context renders with defaultProps 1`] = `
     Object {
       "width": "14.5rem",
     }
-  }>
+  }
+>
   <div
-    className="ax-context__content">
+    className="ax-context__content"
+  >
     Lorem ipsum
   </div>
   <span
-    className="ax-context__arrow" />
+    className="ax-context__arrow"
+  />
 </div>
 `;

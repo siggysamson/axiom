@@ -1,10 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`TextArea renders with a label 1`] = `
 <label
-  className="ax-input__group ax-space--small">
+  className="ax-input__group ax-space--small"
+>
   <div
-    className="ax-input__label">
+    className="ax-input__label"
+  >
     <strong
-      className="ax-text--strong">
+      className="ax-text--strong"
+    >
       Lorem ipsum
     </strong>
   </div>
@@ -14,32 +19,37 @@ exports[`TextArea renders with a label 1`] = `
       Object {
         "minHeight": 150,
       }
-    } />
+    }
+  />
 </label>
 `;
 
 exports[`TextArea renders with custom height 1`] = `
 <label
-  className="ax-input__group ax-space--small">
+  className="ax-input__group ax-space--small"
+>
   <textarea
     className="ax-textarea"
     style={
       Object {
         "minHeight": 300,
       }
-    } />
+    }
+  />
 </label>
 `;
 
 exports[`TextArea renders with defaultProps 1`] = `
 <label
-  className="ax-input__group ax-space--small">
+  className="ax-input__group ax-space--small"
+>
   <textarea
     className="ax-textarea"
     style={
       Object {
         "minHeight": 150,
       }
-    } />
+    }
+  />
 </label>
 `;

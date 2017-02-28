@@ -1,8 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`List renders with defaultProps 1`] = `
 <ul
-  className="ax-list ax-space--small">
+  className="ax-list ax-space--small"
+>
   <li
-    className="ax-list__item">
+    className="ax-list__item"
+  >
     Lorem Ipsum
   </li>
 </ul>
@@ -10,9 +14,11 @@ exports[`List renders with defaultProps 1`] = `
 
 exports[`List renders with inline 1`] = `
 <ul
-  className="ax-list ax-list--inline ax-space--small">
+  className="ax-list ax-list--inline ax-space--small"
+>
   <li
-    className="ax-list__item">
+    className="ax-list__item"
+  >
     Lorem Ipsum
   </li>
 </ul>
@@ -20,9 +26,11 @@ exports[`List renders with inline 1`] = `
 
 exports[`List renders with ordered 1`] = `
 <ol
-  className="ax-list ax-space--small">
+  className="ax-list ax-space--small"
+>
   <li
-    className="ax-list__item">
+    className="ax-list__item"
+  >
     Lorem Ipsum
   </li>
 </ol>

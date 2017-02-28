@@ -1,12 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Progress renders a finite progress indicator 1`] = `
 <div
-  className="ax-progress">
+  className="ax-progress"
+>
   <div
-    className="ax-radial-progress ax-radial-progress--small ax-progress-finite">
+    className="ax-radial-progress ax-radial-progress--small ax-progress-finite"
+  >
     <svg
-      viewBox="0 0 24 24">
+      viewBox="0 0 24 24"
+    >
       <g
-        transform="translate(12, 12) rotate(-90)">
+        transform="translate(12, 12) rotate(-90)"
+      >
         <circle
           className="ax-progress-finite__background"
           r={10}
@@ -14,7 +20,8 @@ exports[`Progress renders a finite progress indicator 1`] = `
             Object {
               "strokeWidth": 4,
             }
-          } />
+          }
+        />
         <circle
           className="ax-progress-finite__arc"
           r={10}
@@ -24,7 +31,8 @@ exports[`Progress renders a finite progress indicator 1`] = `
               "strokeDashoffset": 31.41592653589793,
               "strokeWidth": 4,
             }
-          } />
+          }
+        />
       </g>
     </svg>
   </div>
@@ -33,9 +41,11 @@ exports[`Progress renders a finite progress indicator 1`] = `
 
 exports[`Progress renders a success indicator 1`] = `
 <div
-  className="ax-progress">
+  className="ax-progress"
+>
   <div
-    className="ax-icon-indicator ax-icon-indicator--success ax-icon-indicator--small">
+    className="ax-icon-indicator ax-icon-indicator--success ax-icon-indicator--small"
+  >
     <svg
       className="ax-icon"
       style={
@@ -44,9 +54,11 @@ exports[`Progress renders a success indicator 1`] = `
           "width": "1rem",
         }
       }
-      viewBox="0 0 16 16">
+      viewBox="0 0 16 16"
+    >
       <polygon
-        points="4 7.5 6 9.5 12 3.5 13.5 5 6 12.5 2.5 9" />
+        points="4 7.5 6 9.5 12 3.5 13.5 5 6 12.5 2.5 9"
+      />
     </svg>
   </div>
 </div>
@@ -54,13 +66,17 @@ exports[`Progress renders a success indicator 1`] = `
 
 exports[`Progress renders an infinite progress indicator 1`] = `
 <div
-  className="ax-progress">
+  className="ax-progress"
+>
   <div
-    className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle">
+    className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle"
+  >
     <svg
-      viewBox="0 0 24 24">
+      viewBox="0 0 24 24"
+    >
       <g
-        transform="translate(12, 12) rotate(-90)">
+        transform="translate(12, 12) rotate(-90)"
+      >
         <circle
           className="ax-progress-infinite__arc"
           r={10}
@@ -71,7 +87,8 @@ exports[`Progress renders an infinite progress indicator 1`] = `
               "strokeDashoffset": 15.707963267948966,
               "strokeWidth": 4,
             }
-          } />
+          }
+        />
       </g>
     </svg>
   </div>
@@ -80,13 +97,17 @@ exports[`Progress renders an infinite progress indicator 1`] = `
 
 exports[`Progress renders with defaultProps 1`] = `
 <div
-  className="ax-progress">
+  className="ax-progress"
+>
   <div
-    className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle">
+    className="ax-radial-progress ax-radial-progress--small ax-progress-infinite ax-progress-infinite--subtle"
+  >
     <svg
-      viewBox="0 0 24 24">
+      viewBox="0 0 24 24"
+    >
       <g
-        transform="translate(12, 12) rotate(-90)">
+        transform="translate(12, 12) rotate(-90)"
+      >
         <circle
           className="ax-progress-infinite__arc"
           r={10}
@@ -97,7 +118,8 @@ exports[`Progress renders with defaultProps 1`] = `
               "strokeDashoffset": 15.707963267948966,
               "strokeWidth": 4,
             }
-          } />
+          }
+        />
       </g>
     </svg>
   </div>

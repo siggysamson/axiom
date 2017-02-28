@@ -1,17 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Alert renders with color error 1`] = `
 <div
-  className="ax-alert ax-alert--error">
+  className="ax-alert ax-alert--error"
+>
   <div
-    className="ax-grid__container ax-space--medium">
+    className="ax-grid__container ax-space--medium"
+  >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle">
+      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+    >
       <div
         className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
           }
-        }>
+        }
+      >
         Lorem ipsum
       </div>
     </div>
@@ -21,18 +27,22 @@ exports[`Alert renders with color error 1`] = `
 
 exports[`Alert renders with color info 1`] = `
 <div
-  className="ax-alert ax-alert--info">
+  className="ax-alert ax-alert--info"
+>
   <div
-    className="ax-grid__container ax-space--medium">
+    className="ax-grid__container ax-space--medium"
+  >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle">
+      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+    >
       <div
         className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
           }
-        }>
+        }
+      >
         Lorem ipsum
       </div>
     </div>
@@ -42,18 +52,22 @@ exports[`Alert renders with color info 1`] = `
 
 exports[`Alert renders with color success 1`] = `
 <div
-  className="ax-alert ax-alert--success">
+  className="ax-alert ax-alert--success"
+>
   <div
-    className="ax-grid__container ax-space--medium">
+    className="ax-grid__container ax-space--medium"
+  >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle">
+      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+    >
       <div
         className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
           }
-        }>
+        }
+      >
         Lorem ipsum
       </div>
     </div>
@@ -63,18 +77,22 @@ exports[`Alert renders with color success 1`] = `
 
 exports[`Alert renders with color warning 1`] = `
 <div
-  className="ax-alert ax-alert--warning">
+  className="ax-alert ax-alert--warning"
+>
   <div
-    className="ax-grid__container ax-space--medium">
+    className="ax-grid__container ax-space--medium"
+  >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle">
+      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+    >
       <div
         className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
           }
-        }>
+        }
+      >
         Lorem ipsum
       </div>
     </div>
@@ -84,18 +102,22 @@ exports[`Alert renders with color warning 1`] = `
 
 exports[`Alert renders with defaultProps 1`] = `
 <div
-  className="ax-alert ax-alert--info">
+  className="ax-alert ax-alert--info"
+>
   <div
-    className="ax-grid__container ax-space--medium">
+    className="ax-grid__container ax-space--medium"
+  >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle">
+      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+    >
       <div
         className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
           }
-        }>
+        }
+      >
         Lorem ipsum
       </div>
     </div>
@@ -105,18 +127,22 @@ exports[`Alert renders with defaultProps 1`] = `
 
 exports[`Alert renders with onRemoveClick 1`] = `
 <div
-  className="ax-alert ax-alert--info">
+  className="ax-alert ax-alert--info"
+>
   <div
-    className="ax-grid__container ax-space--medium">
+    className="ax-grid__container ax-space--medium"
+  >
     <div
-      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle">
+      className="ax-grid ax-grid--unresponsive ax-grid--gutters--small ax-grid--v-middle"
+    >
       <div
         className="ax-grid__cell"
         style={
           Object {
             "width": undefined,
           }
-        }>
+        }
+      >
         Lorem ipsum
       </div>
       <div
@@ -125,10 +151,12 @@ exports[`Alert renders with onRemoveClick 1`] = `
           Object {
             "width": undefined,
           }
-        }>
+        }
+      >
         <a
           className="ax-icon-link ax-theme--dark"
-          onClick={[Function]}>
+          onClick={[Function]}
+        >
           <svg
             className="ax-icon"
             style={
@@ -137,9 +165,11 @@ exports[`Alert renders with onRemoveClick 1`] = `
                 "width": "1rem",
               }
             }
-            viewBox="0 0 16 16">
+            viewBox="0 0 16 16"
+          >
             <polygon
-              points="9.5 8 13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5 11.5 13 13 11.5 9.5 8" />
+              points="9.5 8 13 4.5 11.5 3 8 6.5 4.5 3 3 4.5 6.5 8 3 11.5 4.5 13 8 9.5 11.5 13 13 11.5 9.5 8"
+            />
           </svg>
         </a>
       </div>

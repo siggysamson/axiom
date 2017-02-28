@@ -1,198 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Base renders class Component 1`] = `<span />`;
 
 exports[`Base renders className 1`] = `
 <div
-  className="Lorem Ipsum" />
+  className="Lorem Ipsum"
+/>
 `;
 
 exports[`Base renders functional Component 1`] = `<span />`;
 
 exports[`Base renders hiddenUntil always 1`] = `
 <div
-  className="ax-hidden-until--true" />
+  className="ax-hidden-until--true"
+/>
 `;
 
 exports[`Base renders hiddenUntil passed large breakpoint 1`] = `
 <div
-  className="ax-hidden-until--large" />
+  className="ax-hidden-until--large"
+/>
 `;
 
 exports[`Base renders hiddenUntil passed medium breakpoint 1`] = `
 <div
-  className="ax-hidden-until--medium" />
+  className="ax-hidden-until--medium"
+/>
 `;
 
 exports[`Base renders hiddenUntil passed small breakpoint 1`] = `
 <div
-  className="ax-hidden-until--small" />
+  className="ax-hidden-until--small"
+/>
 `;
 
 exports[`Base renders string Component 1`] = `
 <span
-  className="" />
+  className=""
+/>
 `;
 
 exports[`Base renders textBreak all 1`] = `
 <div
-  className="ax-text--break-all" />
+  className="ax-text--break-all"
+/>
 `;
 
 exports[`Base renders textBreak none 1`] = `
 <div
-  className="ax-text--break-none" />
+  className="ax-text--break-none"
+/>
 `;
 
 exports[`Base renders textBreak word 1`] = `
 <div
-  className="ax-text--break-word" />
+  className="ax-text--break-word"
+/>
 `;
 
 exports[`Base renders textCase capital 1`] = `
 <div
-  className="ax-text--capitalize" />
+  className="ax-text--capitalize"
+/>
 `;
 
 exports[`Base renders textCase lower 1`] = `
 <div
-  className="ax-text--lowercase" />
+  className="ax-text--lowercase"
+/>
 `;
 
 exports[`Base renders textCase upper 1`] = `
 <div
-  className="ax-text--uppercase" />
+  className="ax-text--uppercase"
+/>
 `;
 
 exports[`Base renders textCenter always 1`] = `
 <div
-  className="ax-text--center" />
+  className="ax-text--center"
+/>
 `;
 
 exports[`Base renders textCenter passed large breakpoint 1`] = `
 <div
-  className="ax-text--center--large" />
+  className="ax-text--center--large"
+/>
 `;
 
 exports[`Base renders textCenter passed medium breakpoint 1`] = `
 <div
-  className="ax-text--center--medium" />
+  className="ax-text--center--medium"
+/>
 `;
 
 exports[`Base renders textCenter passed small breakpoint 1`] = `
 <div
-  className="ax-text--center--small" />
+  className="ax-text--center--small"
+/>
 `;
 
 exports[`Base renders textColor disabled 1`] = `
 <div
-  className="ax-text--color-disabled" />
+  className="ax-text--color-disabled"
+/>
 `;
 
 exports[`Base renders textColor error 1`] = `
 <div
-  className="ax-text--color-error" />
+  className="ax-text--color-error"
+/>
 `;
 
 exports[`Base renders textColor subtle 1`] = `
 <div
-  className="ax-text--color-subtle" />
+  className="ax-text--color-subtle"
+/>
 `;
 
 exports[`Base renders textColor success 1`] = `
 <div
-  className="ax-text--color-success" />
+  className="ax-text--color-success"
+/>
 `;
 
 exports[`Base renders textColor warning 1`] = `
 <div
-  className="ax-text--color-warning" />
+  className="ax-text--color-warning"
+/>
 `;
 
 exports[`Base renders textEllipsis 1`] = `
 <div
-  className="ax-text--ellipsis" />
+  className="ax-text--ellipsis"
+/>
 `;
 
 exports[`Base renders textLeft always 1`] = `
 <div
-  className="ax-text--left" />
+  className="ax-text--left"
+/>
 `;
 
 exports[`Base renders textLeft passed large breakpoint 1`] = `
 <div
-  className="ax-text--left--large" />
+  className="ax-text--left--large"
+/>
 `;
 
 exports[`Base renders textLeft passed medium breakpoint 1`] = `
 <div
-  className="ax-text--left--medium" />
+  className="ax-text--left--medium"
+/>
 `;
 
 exports[`Base renders textLeft passed small breakpoint 1`] = `
 <div
-  className="ax-text--left--small" />
+  className="ax-text--left--small"
+/>
 `;
 
 exports[`Base renders textRight always 1`] = `
 <div
-  className="ax-text--right" />
+  className="ax-text--right"
+/>
 `;
 
 exports[`Base renders textRight passed large breakpoint 1`] = `
 <div
-  className="ax-text--right--large" />
+  className="ax-text--right--large"
+/>
 `;
 
 exports[`Base renders textRight passed medium breakpoint 1`] = `
 <div
-  className="ax-text--right--medium" />
+  className="ax-text--right--medium"
+/>
 `;
 
 exports[`Base renders textRight passed small breakpoint 1`] = `
 <div
-  className="ax-text--right--small" />
+  className="ax-text--right--small"
+/>
 `;
 
 exports[`Base renders textStrong 1`] = `
 <div
-  className="ax-text--strong" />
+  className="ax-text--strong"
+/>
 `;
 
 exports[`Base renders textWeak 1`] = `
 <div
-  className="ax-text--weak" />
+  className="ax-text--weak"
+/>
 `;
 
 exports[`Base renders theme dark 1`] = `
 <div
-  className="ax-theme--dark" />
+  className="ax-theme--dark"
+/>
 `;
 
 exports[`Base renders theme light 1`] = `
 <div
-  className="ax-theme--light" />
+  className="ax-theme--light"
+/>
 `;
 
 exports[`Base renders visibleUntil always 1`] = `
 <div
-  className="ax-visible-until--true" />
+  className="ax-visible-until--true"
+/>
 `;
 
 exports[`Base renders visibleUntil passed large breakpoint 1`] = `
 <div
-  className="ax-visible-until--large" />
+  className="ax-visible-until--large"
+/>
 `;
 
 exports[`Base renders visibleUntil passed medium breakpoint 1`] = `
 <div
-  className="ax-visible-until--medium" />
+  className="ax-visible-until--medium"
+/>
 `;
 
 exports[`Base renders visibleUntil passed small breakpoint 1`] = `
 <div
-  className="ax-visible-until--small" />
+  className="ax-visible-until--small"
+/>
 `;
 
 exports[`Base renders with defaultProps 1`] = `
 <div
-  className="" />
+  className=""
+/>
 `;

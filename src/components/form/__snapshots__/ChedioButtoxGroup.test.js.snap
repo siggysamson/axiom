@@ -1,29 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ChedioButtoxGroup renders with defaultProps 1`] = `
 <div
-  className="ax-chedio-buttox__group">
+  className="ax-chedio-buttox__group"
+>
   <label
-    className="ax-chedio-buttox__container">
+    className="ax-chedio-buttox__container"
+  >
     <input
       className="ax-chedio-buttox"
       disabled={undefined}
-      type={undefined} />
+      type={undefined}
+    />
     <span
-      className="ax-chedio-buttox__indicator" />
+      className="ax-chedio-buttox__indicator"
+    />
     <span
-      className="ax-chedio-buttox__label">
+      className="ax-chedio-buttox__label"
+    >
       Lorem ipsum
     </span>
   </label>
   <label
-    className="ax-chedio-buttox__container">
+    className="ax-chedio-buttox__container"
+  >
     <input
       className="ax-chedio-buttox"
       disabled={undefined}
-      type={undefined} />
+      type={undefined}
+    />
     <span
-      className="ax-chedio-buttox__indicator" />
+      className="ax-chedio-buttox__indicator"
+    />
     <span
-      className="ax-chedio-buttox__label">
+      className="ax-chedio-buttox__label"
+    >
       Lorem ipsum
     </span>
   </label>
