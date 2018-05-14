@@ -69,10 +69,9 @@ export default class BarChart extends Component {
     /** Upper value of the data displayed on the chart */
     upper: PropTypes.number,
     /**
-     * Labels to be shown along the xAxis, also used to determine where
-     * grid lines are drawn
+     * Method which returns the labels to be shown along the xAxis, also used to determine where grid lines are drawn
      */
-    xAxisLabels: PropTypes.arrayOf(PropTypes.string),
+    xAxisLabels: PropTypes.func,
     /** Control for toggling the zoomed view */
     zoom: PropTypes.bool,
     /** Options for the maximum zoom value */
@@ -83,6 +82,7 @@ export default class BarChart extends Component {
     rowSpace: 'x2',
     showKey: true,
     showDifferenceArea: false,
+    xAxisLabels: () => [],
   };
 
 
@@ -163,8 +163,10 @@ export default class BarChart extends Component {
     const finalZoomMax = Math.max(dataUpper, Math.min(zoomMax !== undefined ? zoomMax : dataUpper, finalUpper));
     const zoomTo = ((finalZoomMax - finalLower) / (finalUpper - finalLower)) * 100;
 
+    const finalXAxisLabels = xAxisLabels(finalLower, finalUpper);
+
     return (
-      <ChartTable { ...rest } xAxisLabels={ xAxisLabels }>
+      <ChartTable { ...rest } xAxisLabels={ finalXAxisLabels }>
         <ChartTableRows
             collapsedVisibleRowCount={ collapsedVisibleRowCount }
             expandButtonSuffix={ expandButtonSuffix }
@@ -172,7 +174,7 @@ export default class BarChart extends Component {
             lower={ dataUpper }
             space={ rowSpace }
             upper={ finalUpper }
-            xAxisLabels={ xAxisLabels }
+            xAxisLabels={ finalXAxisLabels }
             zoom={ zoom }
             zoomTo={ zoom ? zoomTo : undefined }>
           { formattedData.map(({ values, label, benchmark }, index) =>
