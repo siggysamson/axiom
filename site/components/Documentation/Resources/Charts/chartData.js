@@ -192,6 +192,44 @@ export const lineChartData = [{
   values: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
 }];
 
+export const highChartLineData = [{
+  name: 'Forum',
+  data: [14, 18, 15, 14, 13, 12, 21, 17, 23, 18, 17, 9, 16, 7, 2, 8, 12, 11, 15, 9, 6, 7, 8, 7, 14, 7, 7]
+}, {
+  name: 'Blog',
+  data: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
+  dashStyle: 'Dash',
+  marker: {
+    symbol: 'circle',
+    fillColor: '#FFFFFF',
+    lineWidth: 1,
+    lineColor: null,
+  }
+}];
+
+export const highChartBarData = [{
+  name: 'Current',
+  data: [14, 18],
+}, {
+  name: 'Previous',
+  data: [7, 7],
+}];
+
+export const highChartColumnData = [{
+  name: 'Forum',
+  data: [14, 18, 15, 14, 13]
+}, {
+  name: 'Blog',
+  data: [7, 7, 14, 7, 8],
+  dashStyle: 'Dash',
+  marker: {
+    symbol: 'circle',
+    fillColor: '#FFFFFF',
+    lineWidth: 1,
+    lineColor: null,
+  }
+}];
+
 export const sparkLineBenchmark = 10;
 
 export const sparkLineData = [{

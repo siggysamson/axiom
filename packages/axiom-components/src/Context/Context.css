@@ -50,19 +50,23 @@
   @nest .ax-context--info & { background-color: var(--color-ui-info); }
 }
 
-.ax-context--top .ax-context__arrow {
+.ax-context--top .ax-context__arrow,
+.ax-position--arrow[x-placement="top"] .ax-context__arrow {
   transform: translateY(var(--cmp-context-tip-size)) rotate(45deg);
 }
 
-.ax-context--right .ax-context__arrow {
+.ax-context--right .ax-context__arrow,
+.ax-position--arrow[x-placement="right"] .ax-context__arrow {
   transform: translateX(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
 }
 
-.ax-context--bottom .ax-context__arrow {
+.ax-context--bottom .ax-context__arrow,
+.ax-position--arrow[x-placement="bottom"] .ax-context__arrow {
   transform: translateY(calc(var(--cmp-context-tip-size) * -1)) rotate(45deg);
 }
 
-.ax-context--left .ax-context__arrow {
+.ax-context--left .ax-context__arrow,
+.ax-position--arrow[x-placement="left"] .ax-context__arrow {
   transform: translateX(var(--cmp-context-tip-size)) rotate(45deg);
 }
 

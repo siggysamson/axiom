@@ -10,7 +10,11 @@
   "dependencies": {
     "@brandwatch/axiom-automation-testing": "^0.0.4",
     "@brandwatch/axiom-components": "^2.8.0",
+    "@brandwatch/axiom-web-components": "^0.0.1",
     "classnames": "^2.2.1",
+    "highcharts": "^6.1.0",
+    "highcharts-react-official": "^1.1.0",
+    "popper.js": "^1.14.3",
     "prop-types": "^15.6.0",
     "react": "^16.0.0"
   }

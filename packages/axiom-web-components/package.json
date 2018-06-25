@@ -1,0 +1,14 @@
+{
+  "name": "@brandwatch/axiom-web-components",
+  "version": "0.0.1",
+  "description": "Brandwatch Axiom - Web Components",
+  "main": "dist/index.js",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.2",
+    "popper.js": "^1.14.3"
+  }
+}

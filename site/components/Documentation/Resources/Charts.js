@@ -9,6 +9,7 @@ import Line from './Charts/Line';
 import LineChart from './Charts/LineChart';
 import SparkLine from './Charts/SparkLine';
 import WordCloud from './Charts/WordCloud';
+import HighChart from './Charts/HighChart';
 
 export default class Documentation extends Component {
   render() {
@@ -38,6 +39,10 @@ export default class Documentation extends Component {
             id: 'line',
             name: 'Line',
             Component: Line,
+          }, {
+            id: 'highchart',
+            name: 'HighChart',
+            Component: HighChart,
           }, {
             id: 'line-chart',
             name: 'Line Chart',

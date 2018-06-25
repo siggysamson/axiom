@@ -13,6 +13,7 @@ export { default as ColumnChart } from './ColumnChart/ColumnChart';
 export { default as DataPoint } from './DataPoint/DataPoint';
 export { default as DataPoints } from './DataPoint/DataPoints';
 export { default as DotPlotChart } from './DotPlotChart/DotPlotChart';
+export { default as HighChart } from './HighChart/HighChart';
 export { default as Line } from './Line/Line';
 export { default as LineChart } from './LineChart/LineChart';
 export { default as LinePoint } from './Line/LinePoint';
