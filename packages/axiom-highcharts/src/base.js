@@ -6,25 +6,30 @@ function onChartLoad() {
     console.log(this); // eslint-disable-line
     console.log(data); // eslint-disable-line
 
-    const peaks = [1512172800000, 1512259200000, 1512345600000, 1512432000000];
-    // [1513728000000, 1513814400000, 1513900800000];
+    const peaks = [
+      [1512172800000, 1512259200000, 1512345600000, 1512432000000],
+      [1513728000000, 1513814400000, 1513900800000],
+    ];
 
-    let lines = data.filter(({x}) => peaks.includes(x));
+    const areas = peaks.map(peak => {
+      const inner = data.filter(({x}) => peak.includes(x));
+      inner.unshift({ plotX: inner[0].plotX, plotY: this.clipBox.height });
+      inner.push({ plotX: inner[inner.length - 1].plotX, plotY: this.clipBox.height });
+      return inner;
+    });
 
-    lines.unshift({ plotX: lines[0].plotX, plotY: this.clipBox.height });
-    lines.push({ plotX: lines[lines.length - 1].plotX, plotY: this.clipBox.height });
 
-    lines = lines.map(({ plotX, plotY }, index) => (index > 0 ? 'L' : 'M') + ` ${plotX} ${plotY}`);
+    areas.forEach(peakArea => {
+      const lines = peakArea.map(({ plotX, plotY }, index) => (index > 0 ? 'L' : 'M') + ` ${plotX} ${plotY}`);
 
-
-    this.renderer
-    .path((lines))
-    .attr({
+      this.renderer
+      .path((lines))
+      .attr({
         fill: 'green',
         transform: `translate(${this.plotLeft},${this.plotTop}) scale(1 1)`,
-    })
-    .add();
-
+      })
+      .add();
+    });
   }
 }
 
