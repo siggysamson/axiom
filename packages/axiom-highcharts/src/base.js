@@ -1,3 +1,27 @@
+
+function onChartLoad() {
+  if (this.renderer.defs) { // is SVG
+
+    const data = this.yAxis[0].series[0].data;
+    console.log(this); // eslint-disable-line
+    console.log(data); // eslint-disable-line
+
+    const lines = data.map(({ plotX, plotY }, index) => (index > 0 ? 'L' : 'M') + ` ${plotX} ${plotY}`);
+
+    this.renderer
+    .path((lines))
+    .attr({
+        fill: 'none',
+        stroke: '#ff0000',
+        'stroke-width': '6px',
+        'stroke-width': 1,
+        zIndex: 5
+    })
+    .add();
+
+  }
+}
+
 export default {
   global: {
     useUTC: true,
@@ -5,6 +29,9 @@ export default {
   chart: {
     reflow: false,
     animation: false,
+    events: {
+      load: onChartLoad,
+    },
   },
   title: {
     text: null,
