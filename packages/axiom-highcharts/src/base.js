@@ -1,52 +1,3 @@
-
-function createGroup(chart, index) {
-  const group = chart.renderer.g('peak-group-' + index);
-  group.add();
-  return group;
-}
-
-function onChartLoad() {
-  if (this.renderer.defs) { // is SVG
-
-    const data = this.yAxis[0].series[0].data;
-
-    const peaks = [
-      [1512172800000, 1512259200000, 1512345600000, 1512432000000],
-      [1513728000000, 1513814400000, 1513900800000],
-    ];
-
-    const areas = peaks.map(peak => {
-      const inner = data.filter(({ x }) => peak.includes(x));
-      inner.unshift({ plotX: inner[0].plotX, plotY: this.clipBox.height });
-      inner.push({ plotX: inner[inner.length - 1].plotX, plotY: this.clipBox.height });
-      return inner;
-    });
-
-    if (this.peakAreas) {
-      this.peakAreas.forEach(svgElement => {
-        svgElement.destroy();
-        svgElement = null;
-      });
-    }
-
-    const group = createGroup(this, 0);
-
-    this.peakAreas = areas.map(peakArea => {
-      const path = peakArea.map(({ plotX, plotY }, index) => (index > 0 ? 'L' : 'M') + ` ${plotX} ${plotY}`);
-      const svgElement = this.renderer
-        .path((path))
-        .attr({
-          fill: 'green',
-        })
-        .translate(this.plotLeft, this.plotTop);
-
-      svgElement.add(group);
-
-      return svgElement;
-    });
-  }
-}
-
 export default {
   global: {
     useUTC: true,
@@ -54,9 +5,6 @@ export default {
   chart: {
     reflow: false,
     animation: false,
-    events: {
-      render: onChartLoad,
-    },
   },
   title: {
     text: null,
