@@ -1,4 +1,10 @@
 
+function createGroup(chart, index) {
+  const group = chart.renderer.g('peak-group-' + index);
+  group.add();
+  return group;
+}
+
 function onChartLoad() {
   if (this.renderer.defs) { // is SVG
 
@@ -23,6 +29,8 @@ function onChartLoad() {
       });
     }
 
+    const group = createGroup(this, 0);
+
     this.peakAreas = areas.map(peakArea => {
       const path = peakArea.map(({ plotX, plotY }, index) => (index > 0 ? 'L' : 'M') + ` ${plotX} ${plotY}`);
       const svgElement = this.renderer
@@ -32,7 +40,7 @@ function onChartLoad() {
         })
         .translate(this.plotLeft, this.plotTop);
 
-      svgElement.add();
+      svgElement.add(group);
 
       return svgElement;
     });
