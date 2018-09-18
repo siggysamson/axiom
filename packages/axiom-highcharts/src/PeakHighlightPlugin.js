@@ -1,24 +1,24 @@
 
 class PeakHighlight {
-  constructor(chart, peakCoordinates, color) {
+  constructor(chart, peakCoordinates, colorIndex) {
     const path = peakCoordinates.map(({ x, y }, index) => (index > 0 ? 'L' : 'M') + ` ${x} ${y}`);
 
     return chart.renderer
     .path((path))
     .attr({
-      fill: color,
+      class: `highcharts-color-${colorIndex}`,
     });
   }
 }
 
 class PeakHighlightGroup {
-  constructor(chart, peaks, series, color) {
+  constructor(chart, peaks, series, colorIndex) {
     this.chart = chart;
     const group = this.createGroup(0);
     const peakPaths = this.findPeakCoordinates(peaks, series.data);
 
     peakPaths.map(peakArea => {
-      const svgElement = new PeakHighlight(this.chart, peakArea, color);
+      const svgElement = new PeakHighlight(this.chart, peakArea, colorIndex);
       svgElement.add(group);
     });
 
@@ -72,8 +72,7 @@ function drawPeakAreas(chart) {
   chart.peaks._groups = chart.peaks.data.map((peaks, index) => {
     const series = chart.yAxis[0].series[index];
 
-    const color = ['red', 'green'][index]; // Get color from series
-    return new PeakHighlightGroup(chart, peaks, series, color);
+    return new PeakHighlightGroup(chart, peaks, series, series.colorIndex);
   });
 }
 
