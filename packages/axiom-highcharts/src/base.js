@@ -1,65 +1,65 @@
 export default {
   global: {
-    useUTC: true
+    useUTC: true,
   },
   chart: {
     reflow: false,
     animation: false,
   },
   title: {
-    text: null
+    text: null,
   },
   credits: {
-    enabled: false
+    enabled: false,
   },
   exporting: {
     enabled: true,
     buttons: null,
     fallbackToExportServer: true,
-    url: '/exportchart'
+    url: '/exportchart',
   },
   plotOptions: {
     pie: {
       dataLabels: {
         enabled: true,
-      }
+      },
     },
     bar: {
       states: {
         hover: {
-          enabled: false
-        }
+          enabled: false,
+        },
       },
       pointPadding: 0,
-      groupPadding: 0
+      groupPadding: 0,
     },
     column: {
       states: {
         hover: {
-          enabled: false
-        }
+          enabled: false,
+        },
       },
       stacking: 'normal',
       pointPadding: 0.05,
       groupPadding: 0,
       borderWidth: 0.1,
-      lineWidth: 0
+      lineWidth: 0,
     },
     series: {
       cursor: 'pointer',
       animation: false,
       marker: {
         symbol: 'circle',
-        lineWidth: 10
-      }
-    }
+        lineWidth: 10,
+      },
+    },
   },
   tooltip: {
     headerFormat: '<span style="font-size: 13px">{point.key}</span><br/>',
   },
   xAxis: {
     title: {
-      text: ''
+      text: '',
     },
     minPadding: 0.05,
     maxPadding: 0.05,
@@ -69,27 +69,27 @@ export default {
     dateTimeLabelFormats: {
       day: '%e %b',
       week: '%e %b',
-      month: '%b %Y'
+      month: '%b %Y',
     },
     units: [
       [
-        'day', [1, 2]
+        'day', [1, 2],
       ],
       [
-        'week', [1, 2]
+        'week', [1, 2],
       ],
       [
-        'month', [1, 2, 3, 4, 6]
+        'month', [1, 2, 3, 4, 6],
       ],
       [
-        'year', [1]
-      ]
-    ]
+        'year', [1],
+      ],
+    ],
   },
   yAxis: {
     allowDecimals: false,
     title: {
-      text: ''
+      text: '',
     },
     startOnTick: false,
     endOnTick: false,
