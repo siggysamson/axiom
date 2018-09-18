@@ -3,8 +3,6 @@ function onChartLoad() {
   if (this.renderer.defs) { // is SVG
 
     const data = this.yAxis[0].series[0].data;
-    console.log(this); // eslint-disable-line
-    console.log(data); // eslint-disable-line
 
     const peaks = [
       [1512172800000, 1512259200000, 1512345600000, 1512432000000],
@@ -12,23 +10,31 @@ function onChartLoad() {
     ];
 
     const areas = peaks.map(peak => {
-      const inner = data.filter(({x}) => peak.includes(x));
+      const inner = data.filter(({ x }) => peak.includes(x));
       inner.unshift({ plotX: inner[0].plotX, plotY: this.clipBox.height });
       inner.push({ plotX: inner[inner.length - 1].plotX, plotY: this.clipBox.height });
       return inner;
     });
 
+    if (this.peakAreas) {
+      this.peakAreas.forEach(svgElement => {
+        svgElement.destroy();
+        svgElement = null;
+      });
+    }
 
-    areas.forEach(peakArea => {
-      const lines = peakArea.map(({ plotX, plotY }, index) => (index > 0 ? 'L' : 'M') + ` ${plotX} ${plotY}`);
+    this.peakAreas = areas.map(peakArea => {
+      const path = peakArea.map(({ plotX, plotY }, index) => (index > 0 ? 'L' : 'M') + ` ${plotX} ${plotY}`);
+      const svgElement = this.renderer
+        .path((path))
+        .attr({
+          fill: 'green',
+        })
+        .translate(this.plotLeft, this.plotTop);
 
-      this.renderer
-      .path((lines))
-      .attr({
-        fill: 'green',
-        transform: `translate(${this.plotLeft},${this.plotTop}) scale(1 1)`,
-      })
-      .add();
+      svgElement.add();
+
+      return svgElement;
     });
   }
 }
@@ -41,7 +47,7 @@ export default {
     reflow: false,
     animation: false,
     events: {
-      load: onChartLoad,
+      render: onChartLoad,
     },
   },
   title: {
