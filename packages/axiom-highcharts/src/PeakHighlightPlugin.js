@@ -1,25 +1,24 @@
 
 class PeakHighlight {
-  constructor(chart, peakCoordinates) {
+  constructor(chart, peakCoordinates, color) {
     const path = peakCoordinates.map(({ x, y }, index) => (index > 0 ? 'L' : 'M') + ` ${x} ${y}`);
 
     return chart.renderer
     .path((path))
     .attr({
-      fill: 'red',
+      fill: color,
     });
   }
 }
 
 class PeakHighlightGroup {
-  constructor(chart) {
+  constructor(chart, peaks, series, color) {
     this.chart = chart;
-
     const group = this.createGroup(0);
-    const peakPaths = this.findPeakCoordinates();
+    const peakPaths = this.findPeakCoordinates(peaks, series.data);
 
     peakPaths.map(peakArea => {
-      const svgElement = new PeakHighlight(this.chart, peakArea);
+      const svgElement = new PeakHighlight(this.chart, peakArea, color);
       svgElement.add(group);
     });
 
@@ -33,14 +32,16 @@ class PeakHighlightGroup {
     return group;
   }
 
-  findPeakCoordinates() {
-    const data = this.chart.yAxis[0].series[0].data;
-
-    return this.chart.peaks.data.map(peak => {
+  findPeakCoordinates(peaks, data) {
+    return peaks.map(peak => {
       const coordinates = data.filter(({ x }) => peak.includes(x)).map(item => ({
         x: item.plotX,
         y: item.plotY,
       }));
+
+      if (!coordinates.length) {
+        return [];
+      }
 
       // Left bottom
       coordinates.unshift({
@@ -59,9 +60,6 @@ class PeakHighlightGroup {
   }
 }
 
-
-
-
 function drawPeakAreas(chart) {
 
   if (chart.peaks._groups) {
@@ -71,7 +69,12 @@ function drawPeakAreas(chart) {
     });
   }
 
-  chart.peaks._groups = [new PeakHighlightGroup(chart)];
+  chart.peaks._groups = chart.peaks.data.map((peaks, index) => {
+    const series = chart.yAxis[0].series[index];
+
+    const color = ['red', 'green'][index]; // Get color from series
+    return new PeakHighlightGroup(chart, peaks, series, color);
+  });
 }
 
 export default (H) => {
@@ -80,12 +83,42 @@ export default (H) => {
     chart.peaks = chart.peaks || {};
 
     chart.peaks.data = [
-      [1512172800000, 1512259200000, 1512345600000, 1512432000000],
-      [1513728000000, 1513814400000, 1513900800000],
+      [
+        [
+          Date.UTC(2017, 11, 2),
+          Date.UTC(2017, 11, 3),
+          Date.UTC(2017, 11, 4),
+        ],
+        [
+          Date.UTC(2017, 11, 20),
+          Date.UTC(2017, 11, 21),
+          Date.UTC(2017, 11, 22),
+        ],
+      ],
+      [
+        [
+          Date.UTC(2017, 11, 6),
+          Date.UTC(2017, 11, 7),
+          Date.UTC(2017, 11, 8),
+          Date.UTC(2017, 11, 9),
+          Date.UTC(2017, 11, 10),
+          Date.UTC(2017, 11, 11),
+        ],
+        [
+          Date.UTC(2017, 11, 18),
+          Date.UTC(2017, 11, 19),
+          Date.UTC(2017, 11, 20),
+          Date.UTC(2017, 11, 21),
+        ],
+      ],
     ];
 
     H.addEvent(chart, 'render', () => {
-      drawPeakAreas(chart);
+      try {
+        drawPeakAreas(chart);
+      } catch(error) {
+        console.log(error);
+      }
     });
  });
 };
