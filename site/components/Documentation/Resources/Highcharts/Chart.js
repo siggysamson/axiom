@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from '@brandwatch/axiom-components';
 import { Highcharts, HighchartsReact } from '@brandwatch/axiom-highcharts';
 import { Context, Heading } from '@brandwatch/axiom-components';
 
@@ -11,6 +12,7 @@ export default class AxiomHighchartsLineChart extends React.Component {
       selectedItem: null,
     };
 
+    this.togglePeakArea = this.togglePeakArea.bind(this);
     this.ref = React.createRef();
   }
 
@@ -74,6 +76,16 @@ export default class AxiomHighchartsLineChart extends React.Component {
     console.log('show default mode');
   }
 
+  togglePeakArea() {
+    if (!this.ref.current || !this.ref.current.chart || !this.ref.current.chart.peaks) {
+      return;
+    }
+
+    const seriesIndex = 2;
+    const peakIndex = 0;
+    this.ref.current.chart.peaks.onHover(seriesIndex, peakIndex);
+  }
+
   render() {
     return (
       <div>
@@ -112,7 +124,6 @@ export default class AxiomHighchartsLineChart extends React.Component {
                 //     }
                 //   }
                 // }
-<<<<<<< HEAD
                 },
               },
               tooltip: {
@@ -144,26 +155,7 @@ export default class AxiomHighchartsLineChart extends React.Component {
               }],
             } }
             ref={ this.ref }/>
-=======
-              }
-            },
-            tooltip: {
-              outside: true
-            },
-            series: [{
-              name: 'Series 1',
-              data: [7, 7, 14, 7, 8, 7, 6, 9, 15, 11, 12, 8, 2, 7, 16, 9, 17, 18, 23, 17, 21, 12, 13, 14, 15, 18, 14],
-            }, {
-              name: 'Series 2',
-              data: [14, 18, 15, 14, 13, 12, 21, 17, 23, 18, 17, 9, 16, 7, 2, 8, 12, 11, 15, 9, 6, 7, 8, 7, 14, 7, 7],
-            }, {
-              colorIndex: 'blast-off',
-              name: 'Series 3',
-              data: [23, 28, 12, 18, 20, 22, 21, 37, 13, 8, 7, 13, 21, 18, 23, 11, 20, 16, 10, 15, 12, 17, 18, 37, 12, 9, 14],
-            }]
-          }}
-        />
->>>>>>> wip
+        <Button onClick={ this.togglePeakArea }>Toggle peak area</Button>
         {
         //  better to use popper.js here
         }

@@ -3,10 +3,26 @@ class PeakHighlight {
   constructor(chart, peakCoordinates, colorIndex) {
     const path = peakCoordinates.map(({ x, y }, index) => (index > 0 ? 'L' : 'M') + ` ${x} ${y}`);
 
-    return chart.renderer
+    this._isVisible = false;
+
+    this.el = chart.renderer
     .path((path))
     .attr({
+      style: 'display: none',
       class: `peak-gradient-${colorIndex}`,
+    });
+
+    return this;
+  }
+
+  destroy() {
+    this.el.destroy();
+  }
+
+  toggle() {
+    this._isVisible = !this._isVisible;
+    this.el.attr({
+      style: `display: ${this._isVisible ? 'block' : 'none'}`,
     });
   }
 }
@@ -17,12 +33,22 @@ class PeakHighlightGroup {
     const group = this.createGroup(0);
     const peakPaths = this.findPeakCoordinates(peaks, series.data);
 
-    peakPaths.map(peakArea => {
-      const svgElement = new PeakHighlight(this.chart, peakArea, colorIndex);
-      svgElement.add(group);
+    this.peakHighlights = peakPaths.map(peakArea => {
+      const peakHighlight = new PeakHighlight(this.chart, peakArea, colorIndex);
+      peakHighlight.el.add(group);
+
+      return peakHighlight;
     });
 
-    return group;
+    return this;
+  }
+
+  destroy() {
+    this.peakHighlights.forEach(peak => peak.destroy());
+  }
+
+  toggleArea(peakIndex) {
+    this.peakHighlights[peakIndex].toggle();
   }
 
   createGroup(index) {
@@ -80,6 +106,13 @@ export default (H) => {
 
   H.Chart.prototype.callbacks.push(chart => {
     chart.peaks = chart.peaks || {};
+
+    chart.peaks.onHover = function(seriesIndex, peakIndex) {
+      const group = chart.peaks._groups[seriesIndex];
+      if (group) {
+        group.toggleArea(peakIndex);
+      }
+    };
 
     chart.peaks.data = [
       [
