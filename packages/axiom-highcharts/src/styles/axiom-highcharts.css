@@ -888,14 +888,12 @@ text.highcharts-drilldown-data-label,
 
 /* Annotations module */
 .highcharts-annotation-label-box {
-  stroke-width: 1px;
-  stroke: #000000;
-  fill: #000000;
-  fill-opacity: 0.75;
+  stroke: inherit;
+  fill: inherit
 }
 
 .highcharts-annotation-label text {
-  fill: var(--color-theme-border);
+  fill: var(--color-ui-white);
 }
 
 /* Grid Lines*/
