@@ -229,3 +229,31 @@ highcharts-legend-item .highcharts-point {
     stroke: $color;
   }
 };
+
+.peak-gradient {
+  stroke: none;
+}
+
+.peak-gradient stop[offset="0"] {
+	stop-opacity: 0.3;
+}
+
+.peak-gradient stop[offset="1"] {
+	stop-opacity: 0.04;
+}
+
+.peak-gradient-0 {
+  fill: url(#peak-gradient-0);
+}
+
+.peak-gradient-0 stop {
+  stop-color: var(--color-product-giant-leap);
+}
+
+.peak-gradient-blast-off {
+  fill: url(#peak-gradient-1);
+}
+
+.peak-gradient-blast-off stop {
+  stop-color: var(--color-product-blast-off);
+}

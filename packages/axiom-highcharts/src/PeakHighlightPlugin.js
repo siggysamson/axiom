@@ -6,7 +6,7 @@ class PeakHighlight {
     return chart.renderer
     .path((path))
     .attr({
-      class: `highcharts-color-${colorIndex}`,
+      class: `peak-gradient-${colorIndex}`,
     });
   }
 }
@@ -94,9 +94,9 @@ export default (H) => {
           Date.UTC(2017, 11, 22),
         ],
       ],
+      [],
       [
         [
-          Date.UTC(2017, 11, 6),
           Date.UTC(2017, 11, 7),
           Date.UTC(2017, 11, 8),
           Date.UTC(2017, 11, 9),
@@ -104,10 +104,9 @@ export default (H) => {
           Date.UTC(2017, 11, 11),
         ],
         [
-          Date.UTC(2017, 11, 18),
-          Date.UTC(2017, 11, 19),
-          Date.UTC(2017, 11, 20),
-          Date.UTC(2017, 11, 21),
+          Date.UTC(2017, 11, 23),
+          Date.UTC(2017, 11, 24),
+          Date.UTC(2017, 11, 25),
         ],
       ],
     ];

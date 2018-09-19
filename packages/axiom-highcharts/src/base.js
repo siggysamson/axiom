@@ -57,6 +57,40 @@ export default {
   tooltip: {
     headerFormat: '<span style="font-size: 13px">{point.key}</span><br/>',
   },
+  defs: {
+    peakGradient0: {
+      tagName: 'linearGradient',
+      id: 'peak-gradient-0',
+      class: 'peak-gradient peak-gradient-0',
+      x1: 0,
+      y1: 0,
+      x2: 0,
+      y2: 1,
+      children: [{
+        tagName: 'stop',
+        offset: 0,
+      }, {
+        tagName: 'stop',
+        offset: 1,
+      }],
+    },
+    peakGradient1: {
+      tagName: 'linearGradient',
+      id: 'peak-gradient-1',
+      class: 'peak-gradient peak-gradient-blast-off',
+      x1: 0,
+      y1: 0,
+      x2: 0,
+      y2: 1,
+      children: [{
+        tagName: 'stop',
+        offset: 0,
+      }, {
+        tagName: 'stop',
+        offset: 1,
+      }],
+    },
+  },
   xAxis: {
     title: {
       text: '',

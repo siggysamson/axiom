@@ -156,10 +156,10 @@ export default class AxiomHighchartsLineChart extends React.Component {
             }, {
               name: 'Series 2',
               data: [14, 18, 15, 14, 13, 12, 21, 17, 23, 18, 17, 9, 16, 7, 2, 8, 12, 11, 15, 9, 6, 7, 8, 7, 14, 7, 7],
-            // }, {
-            //   colorIndex: 'blast-off',
-            //   name: 'Series 3',
-            //   data: [23, 28, 12, 18, 20, 22, 21, 37, 13, 8, 7, 13, 21, 18, 23, 11, 20, 16, 10, 15, 12, 17, 18, 37, 12, 9, 14],
+            }, {
+              colorIndex: 'blast-off',
+              name: 'Series 3',
+              data: [23, 28, 12, 18, 20, 22, 21, 37, 13, 8, 7, 13, 21, 18, 23, 11, 20, 16, 10, 15, 12, 17, 18, 37, 12, 9, 14],
             }]
           }}
         />
