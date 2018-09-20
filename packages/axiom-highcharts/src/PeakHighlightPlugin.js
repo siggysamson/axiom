@@ -3,8 +3,6 @@ class PeakHighlight {
   constructor(chart, peakCoordinates, colorIndex) {
     const path = peakCoordinates.map(({ x, y }, index) => (index > 0 ? 'L' : 'M') + ` ${x} ${y}`);
 
-    this._isVisible = false;
-
     this.el = chart.renderer
     .path((path))
     .attr({
@@ -19,10 +17,15 @@ class PeakHighlight {
     this.el.destroy();
   }
 
-  toggle() {
-    this._isVisible = !this._isVisible;
+  show() {
     this.el.attr({
-      style: `display: ${this._isVisible ? 'block' : 'none'}`,
+      style: 'display: block',
+    });
+  }
+
+  hide() {
+    this.el.attr({
+      style: 'display: none',
     });
   }
 }
@@ -47,8 +50,12 @@ class PeakHighlightGroup {
     this.peakHighlights.forEach(peak => peak.destroy());
   }
 
-  toggleArea(peakIndex) {
-    this.peakHighlights[peakIndex].toggle();
+  show(peakIndex) {
+    this.peakHighlights[peakIndex].show();
+  }
+
+  hide(peakIndex) {
+    this.peakHighlights[peakIndex].hide();
   }
 
   createGroup(index) {
@@ -107,10 +114,17 @@ export default (H) => {
   H.Chart.prototype.callbacks.push(chart => {
     chart.peaks = chart.peaks || {};
 
-    chart.peaks.onHover = function(seriesIndex, peakIndex) {
+    chart.peaks.show = function(seriesIndex, peakIndex) {
       const group = chart.peaks._groups[seriesIndex];
       if (group) {
-        group.toggleArea(peakIndex);
+        group.show(peakIndex);
+      }
+    };
+
+    chart.peaks.hide = function(seriesIndex, peakIndex) {
+      const group = chart.peaks._groups[seriesIndex];
+      if (group) {
+        group.hide(peakIndex);
       }
     };
 

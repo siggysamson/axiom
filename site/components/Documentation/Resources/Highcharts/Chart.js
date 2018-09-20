@@ -83,7 +83,17 @@ export default class AxiomHighchartsLineChart extends React.Component {
 
     const seriesIndex = 2;
     const peakIndex = 0;
-    this.ref.current.chart.peaks.onHover(seriesIndex, peakIndex);
+
+    if (this.peakVisible) {
+      this.ref.current.chart.peaks.hide(seriesIndex, peakIndex);
+    } else {
+      this.ref.current.chart.peaks.show(seriesIndex, peakIndex);
+    }
+
+    // For the purpose of this demo we keep it simple
+    // setState cause a re-render which needs to be prevented
+    // by implementing shouldComponentUpdate
+    this.peakVisible = !this.peakVisible;
   }
 
   render() {
@@ -140,19 +150,19 @@ export default class AxiomHighchartsLineChart extends React.Component {
                 name: 'Series 3',
                 data: [23, 28, 12, 18, 20, 22, 21, 37, 13, 8, 7, 13, 21, 18, 23, 11, 20, 16, 10, 15, 12, 17, 18, 37, 12, 9, 14],
               }],
-              annotations: [{
-                labels: [{
-                  point: {
-                    x: Date.UTC(2017, 11, 1),
-                    y: 7,
-                    xAxis: 0,
-                    yAxis: 0,
-                  },
-                  text: 'A',
-                  shape: 'circle',
-                  className: 'highcharts-color-0 highcharts-tooltip',
-                }],
-              }],
+              // annotations: [{
+              //   labels: [{
+              //     point: {
+              //       x: Date.UTC(2017, 11, 1),
+              //       y: 7,
+              //       xAxis: 0,
+              //       yAxis: 0,
+              //     },
+              //     text: 'A',
+              //     shape: 'circle',
+              //     className: 'highcharts-color-0 highcharts-tooltip',
+              //   }],
+              // }],
             } }
             ref={ this.ref }/>
         <Button onClick={ this.togglePeakArea }>Toggle peak area</Button>

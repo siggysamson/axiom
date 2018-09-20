@@ -54,9 +54,10 @@ export default {
       },
     },
   },
-  tooltip: {
-    headerFormat: '<span style="font-size: 13px">{point.key}</span><br/>',
-  },
+  tooltip: null,
+  // tooltip: {
+  //   headerFormat: '<span style="font-size: 13px">{point.key}</span><br/>',
+  // },
   defs: {
     peakGradient0: {
       tagName: 'linearGradient',
