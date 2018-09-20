@@ -97,20 +97,25 @@ function drawPeakAreas(chart) {
 
   if (chart.peaks._groups) {
     chart.peaks._groups.forEach(peakHighlightGroup => {
-      peakHighlightGroup.destroy();
-      peakHighlightGroup = null;
+      if (peakHighlightGroup) {
+        peakHighlightGroup.destroy();
+        peakHighlightGroup = null;
+      }
     });
   }
 
   chart.peaks._groups = chart.peaks.data.map((peaks, index) => {
     const series = chart.yAxis[0].series[index];
 
+    if (!series.visible) {
+      return null;
+    }
+
     return new PeakHighlightGroup(chart, peaks, series, series.colorIndex);
   });
 }
 
 export default (H) => {
-
   H.Chart.prototype.callbacks.push(chart => {
     chart.peaks = chart.peaks || {};
 

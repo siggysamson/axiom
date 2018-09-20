@@ -92,13 +92,19 @@ function drawPeakLabels(chart) {
 
   if (chart.peakLabels._groups) {
     chart.peakLabels._groups.forEach(peakLabelGroup => {
-      peakLabelGroup.destroy();
-      peakLabelGroup = null;
+      if (peakLabelGroup) {
+        peakLabelGroup.destroy();
+        peakLabelGroup = null;
+      }
     });
   }
 
   chart.peakLabels._groups = chart.peakLabels.data.map((labels, index) => {
     const series = chart.yAxis[0].series[index];
+
+    if (!series.visible) {
+      return null;
+    }
 
     return new PeakLabelGroup(chart, labels, series, series.colorIndex, index);
   });
@@ -110,7 +116,7 @@ export default (H) => {
 
 
     const events = {
-      click: (event, self) => console.log('click', event, self),
+      click: (event, peakLabel) => { console.log('click', event, peakLabel); },
       mouseover: (peakLabel) => {
         chart.peaks.show(peakLabel.seriesIndex, peakLabel.labelIndex);
       },
