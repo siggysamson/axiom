@@ -4,15 +4,15 @@ class PeakLabel {
     this.seriesIndex = seriesIndex;
     this.labelIndex = labelIndex;
 
-    const path = ['M0 0 H 20 V 20 H 0'];
+    const path = ['M15.73,23.41,12,29,8.27,23.41a12,12,0,1,1,7.46,0Z'];
     const bg = chart.renderer
       .path((path))
       .attr({
         class: `highcharts-color-${colorIndex}`,
       });
 
-    const WIDTH = 10;
-    const HEIGHT = 20;
+    const WIDTH = 12;
+    const HEIGHT = 35;
 
     const group = chart.renderer.g('peak-label')
       .translate(data.x - WIDTH, data.y - HEIGHT);
@@ -21,9 +21,9 @@ class PeakLabel {
 
 
     const text = chart.renderer.text(data.letter).attr({
-      y: 12,
-      x: 5,
-      style: 'pointer-events: none',
+      y: 15,
+      x: 9,
+      style: 'pointer-events: none; fill: #fff',
     });
     text.add(group);
 
