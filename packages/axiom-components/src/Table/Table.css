@@ -71,6 +71,18 @@
 }
 
 .ax-table__header-button {
+  /* reset */
+  overflow: visible;
+  margin: 0;
+  border-radius: 0;
+  font: inherit;
+
+  /* Remove the inner border and padding in Firefox. */
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+
   display: inline-flex;
   position: relative;
   align-items: center;

@@ -31,7 +31,6 @@ body[class*="ax-theme"],
   line-height: var(--line-height-body);
 }
 
-button,
 input {
   overflow: visible; /*  Show the overflow in Edge. */
 }
@@ -44,17 +43,4 @@ textarea {
 
 textarea {
   overflow: auto; /* Remove the default vertical scrollbar in IE. */
-}
-
-/* normalise button styles */
-button {
-  margin: 0;
-  border-radius: 0;
-  font: inherit;
-
-  /* Remove the inner border and padding in Firefox. */
-  &::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
-  }
 }

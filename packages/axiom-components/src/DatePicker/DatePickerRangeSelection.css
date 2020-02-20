@@ -5,6 +5,18 @@
 }
 
 .ax-date-range-selection__item {
+  /* reset */
+  overflow: visible;
+  margin: 0;
+  border-radius: 0;
+  font: inherit;
+
+  /* Remove the inner border and padding in Firefox. */
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+
   position: relative;
   height: var(--component-round-size-small);
   padding: 0 var(--spacing-grid-size--x2);

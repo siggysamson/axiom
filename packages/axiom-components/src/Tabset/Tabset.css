@@ -48,6 +48,18 @@
 }
 
 .ax-tabset__button {
+  /* reset */
+  overflow: visible;
+  margin: 0;
+  border-radius: 0;
+  font: inherit;
+
+  /* Remove the inner border and padding in Firefox. */
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+
   outline: 0;
   border: 0;
   background: none;
