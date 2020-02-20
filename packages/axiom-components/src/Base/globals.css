@@ -1,24 +1,26 @@
 /* stylelint-disable property-no-vendor-prefix, selector-max-type */
 /* stylelint-disable selector-max-universal */
-*,
-*::before,
-*::after {
+[class*="ax-theme"]*,
+[class*="ax-theme"]*::before,
+[class*="ax-theme"]*::after {
   box-sizing: inherit;
 }
 /* stylelint-enable selector-max-universal */
 
-html,
-body {
+html[class*="ax-theme"],
+body[class*="ax-theme"],
+[class*="ax-theme"] body {
   box-sizing: border-box;
 }
 
-html {
+html[class*="ax-theme"] {
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+body[class*="ax-theme"],
+[class*="ax-theme"] body {
   margin: 0;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
