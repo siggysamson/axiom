@@ -32,7 +32,6 @@ body[class*="ax-theme"],
 }
 
 button,
-hr,
 input {
   overflow: visible; /*  Show the overflow in Edge. */
 }

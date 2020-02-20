@@ -1,6 +1,7 @@
 .ax-separator {
   width: 100%;
   border-color: var(--color-theme-border);
+  overflow: visible;
 }
 
 .ax-separator--solid {
