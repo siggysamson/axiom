@@ -12,6 +12,12 @@
   --cmp-checkbox-indeterminate-horizontal: calc(var(--cmp-input-checkbox-size) * 0.2);
 }
 
+.ax-chediobutton {
+  /* reset */
+  overflow: visible; /*  Show the overflow in Edge. */
+  font: inherit;
+}
+
 .ax-checkbox,
 .ax-radio {
   display: flex;

@@ -27,6 +27,10 @@
 }
 
 .ax-toggle__input {
+  /* reset */
+  overflow: visible; /*  Show the overflow in Edge. */
+  font: inherit;
+
   position: absolute;
   opacity: 0;
   cursor: inherit;

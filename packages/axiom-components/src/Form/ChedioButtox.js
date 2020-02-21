@@ -51,7 +51,7 @@ export default class ChedioButtox extends Component {
           space="x2"
           title={ title }>
         <input { ...rest }
-            className={ `${className}__input` }
+            className={ `${className}__input ax-chediobuttox` }
             disabled={ disabled }
             type={ inputType } />
 
