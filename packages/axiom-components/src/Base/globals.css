@@ -1,8 +1,8 @@
 /* stylelint-disable property-no-vendor-prefix, selector-max-type */
 /* stylelint-disable selector-max-universal */
-[class*="ax-theme"]*,
-[class*="ax-theme"]*::before,
-[class*="ax-theme"]*::after {
+[class*="ax-theme"] *,
+[class*="ax-theme"] *::before,
+[class*="ax-theme"] *::after {
   box-sizing: inherit;
 }
 /* stylelint-enable selector-max-universal */
