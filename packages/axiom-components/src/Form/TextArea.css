@@ -1,4 +1,9 @@
 .ax-textarea {
+  /* reset */
+  margin: 0; /* Remove the margin in Firefox and Safari. */
+  font: inherit;
+  overflow: auto; /* Remove the default vertical scrollbar in IE. */
+
   padding: var(--component-padding-vertical-medium) var(--component-padding-horizontal-small);
   border: 0;
   border-radius: var(--component-border-radius);

@@ -30,12 +30,3 @@ body[class*="ax-theme"],
   text-rendering: optimizeLegibility;
   line-height: var(--line-height-body);
 }
-
-textarea {
-  margin: 0; /* Remove the margin in Firefox and Safari. */
-  font: inherit;
-}
-
-textarea {
-  overflow: auto; /* Remove the default vertical scrollbar in IE. */
-}
