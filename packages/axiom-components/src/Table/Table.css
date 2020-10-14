@@ -160,7 +160,7 @@
 }
 
 /* stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix */
-.ax-table__header-tooltip--wrap {
+.ax-table__header-tooltip--wrap.ax-table__header-tooltip--wrap {
   display: -webkit-box;
   white-space: normal;
   -webkit-line-clamp: 2;
